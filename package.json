@@ -13,9 +13,10 @@
     "ironbean-react": "^1.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "rollup-plugin-swc": "^0.2.1"
-  },
-  "devDependencies": {
+    "rollup-plugin-swc": "^0.2.1",
+    "@swc/cli": "^0.1.32",
+    "@swc/core": "^1.2.45",
+    "@swc/core-win32-x64-msvc": "^1.2.165",
     "@rollup/plugin-typescript": "^8.3.1",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
@@ -24,5 +25,7 @@
     "typescript": "^4.5.4",
     "vite": "^2.9.0",
     "vite-plugin-swc-react": "^0.1.12"
+  },
+  "devDependencies": {
   }
 }
