@@ -1,9 +1,25 @@
+import React from 'react'
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import {autowired, component } from 'ironbean'
+import { useBean } from 'ironbean-react'
+
+@component
+class B {
+
+}
+
+@component
+class A {
+   @autowired b!: B;
+}
 
 function App() {
   const [count, setCount] = useState(0)
+  const a = useBean(A);
+
+  console.log(a.b)
 
   return (
     <div className="App">
@@ -11,7 +27,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button type="button"  className={""} onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
         </p>
